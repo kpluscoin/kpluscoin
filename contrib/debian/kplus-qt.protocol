@@ -1,0 +1,11 @@
+[Protocol]
+exec=kplus-qt '%u'
+protocol=kplus
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

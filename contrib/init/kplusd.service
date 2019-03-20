@@ -1,0 +1,26 @@
+[Unit]
+Description=KPLUS's distributed currency daemon
+After=network.target
+
+[Service]
+User=kplus
+Group=kplus
+
+Type=forking
+PIDFile=/var/lib/kplusd/kplusd.pid
+
+ExecStart=/usr/bin/kplusd -daemon -pid=/var/lib/kplusd/kplusd.pid \
+          -conf=/etc/kplus/kplus.conf -datadir=/var/lib/kplusd
+
+ExecStop=-/usr/bin/kplus-cli -conf=/etc/kplus/kplus.conf \
+         -datadir=/var/lib/kplusd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

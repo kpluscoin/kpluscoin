@@ -1,0 +1,26 @@
+# /etc/conf.d/kplusd: config file for /etc/init.d/kplusd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/kplus/kplus.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/kplusd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/kplusd.pid"
+
+# Where to write kplusd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/kplusd"
+
+# User and group to own kplusd process
+#BITCOIND_USER="kplus"
+#BITCOIND_GROUP="kplus"
+
+# Path to kplusd executable
+#BITCOIND_BIN="/usr/bin/kplusd"
+
+# Nice value to run kplusd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
