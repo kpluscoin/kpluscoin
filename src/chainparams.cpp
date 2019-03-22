@@ -54,7 +54,8 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
 boost::assign::map_list_of
-(0, uint256("0x00000697f8ffe63be397fffd6c08d149b2d37b25469bea69c0d2136e85dd691a"));
+(0, uint256("0x00000697f8ffe63be397fffd6c08d149b2d37b25469bea69c0d2136e85dd691a")),
+(2000, uint256("0xb29b5515dc465b2a3d7860c3abb250a6a43f34407812b9dc6f949d3f45157b05"));
 	 
 	
 
@@ -143,6 +144,13 @@ public:
 
 		vSeeds.push_back(CDNSSeedData("202.182.101.98", "202.182.101.98"));
 		vSeeds.push_back(CDNSSeedData("45.32.31.189", "45.32.31.189"));
+		
+		vSeeds.push_back(CDNSSeedData("207.148.70.241", "207.148.70.241"));
+		vSeeds.push_back(CDNSSeedData("139.180.136.147", "139.180.136.147"));
+		
+		vSeeds.push_back(CDNSSeedData("149.28.9.237", "149.28.9.237"));
+		vSeeds.push_back(CDNSSeedData("144.202.80.206", "144.202.80.206"));
+		
 
 		// VENTURE addresses start with 'G'
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 45);
